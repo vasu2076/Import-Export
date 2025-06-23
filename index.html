@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./index.css">
+    <style>
+        .swiper {
+      height: 100vh;
+      margin-top: 3%;
+    }
+
+    .swiper-slide {
+      position: relative;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1;
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+      animation: fadeInUp 1.5s ease-in-out;
+      padding: 20px;
+    }
+
+    .slide-content h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+
+    .slide-content p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+    }
+
+    .slide-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .slide-buttons a {
+      text-decoration: none;
+      color: #fff;
+      padding: 12px 30px;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .slide-buttons a:first-child {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .slide-buttons a:hover {
+      background-color: #fff;
+      color: #000;
+      border: none;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .slide-content h1 {
+        font-size: 2rem;
+      }
+
+      .slide-content p {
+        font-size: 1rem;
+      }
+
+      .slide-buttons a {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+    </style>
+</head>
+<body>
+       <nav id="navigation" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><span>Import-Export</span></a>
+   <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link active" href="#Home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Project">Project</a></li>
+          <li class="nav-item"><a class="nav-link" href="#service">Service</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Bookquote">Book quote</a></li>
+          <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
+          <li class="nav-item"> <a href="#Bookquote" class="phone-btn">
+          Book quote<i class="fa-solid fa-chevron-right"></i>
+        </a></li>
+        </ul>
+      </div>
+  </div>
+</nav>
+
+<section class="swiper mySwiper" id="Home">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('https://demo.bytelabx.com/laravel/quriar/assets/img/hero/hero-bg-1.jpg');">
+        <div class="overlay"></div>
+        <div class="slide-content">
+          <h1>Import Global Products</h1>
+          <p>Reliable sourcing from international partners to fuel your business growth.</p>
+          <div class="slide-buttons">
+            <a href="#">Explore Services</a>
+            <a href="#">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" style="background-image: url('https://demo.bytelabx.com/laravel/quriar/assets/img/hero/hero-bg-2.jpg');">
+        <div class="overlay"></div>
+        <div class="slide-content">
+          <h1>Export With Confidence</h1>
+          <p>Delivering your products globally with speed and safety.</p>
+          <div class="slide-buttons">
+            <a href="#">Explore Services</a>
+            <a href="#">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</section>
+
+<section id="Project">
+   <h3 class="text-center mt-4 fw-semibold"  style="color: #007bff;">Our Project</h3>
+  <div class="filter-buttons mt-3">
+    <button class="active">All</button>
+    <button>Ocean Freight</button>
+    <button>Air Freight</button>
+    <button>Car Shipping</button>
+    <button>Warehouse Solutions</button>
+  </div>
+  <div class="container">
+    <div class="row g-4 project-row">
+
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="https://html.themexriver.com/fastrans/assets/img/project/port3.jpg" alt="Project Image">
+          <div class="overla">
+            <h5>Service & Aftermarket Logistics</h5>
+            <p>dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus facilisis.</p>
+            <button class="read-more-btn">Read More →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="https://html.themexriver.com/fastrans/assets/img/project/port2.jpg" alt="Transport Project">
+           <div class="overla">
+            <h5>Service & Aftermarket Logistics</h5>
+            <p>dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus facilisis.</p>
+            <button class="read-more-btn">Read More →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="https://html.themexriver.com/fastrans/assets/img/project/port4.jpg" alt="Ship Project">
+           <div class="overla">
+            <h5>Service & Aftermarket Logistics</h5>
+            <p>dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus facilisis.</p>
+            <button class="read-more-btn">Read More →</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container mt-5">
+    <div class="row g-4 project-row">
+
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="https://html.themexriver.com/fastrans/assets/img/service/ser6.jpg" alt="Project Image">
+          <div class="overla">
+            <h5>Service & Aftermarket Logistics</h5>
+            <p>dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus facilisis.</p>
+            <button class="read-more-btn">Read More →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="https://html.themexriver.com/fastrans/assets/img/service/ser7.jpg" alt="Transport Project">
+           <div class="overla">
+            <h5>Service & Aftermarket Logistics</h5>
+            <p>dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus facilisis.</p>
+            <button class="read-more-btn">Read More →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="project-card">
+          <img src="https://html.themexriver.com/fastrans/assets/img/blog/blg3.5.jpg" alt="Ship Project">
+           <div class="overla">
+            <h5>Service & Aftermarket Logistics</h5>
+            <p>dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus facilisis.</p>
+            <button class="read-more-btn">Read More →</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 text-center" id="service">
+  <div class="container">
+      <h3 class="text-center mb-4 fw-semibold" style="color: #007bff;">Our Service</h3>
+    <p class="text-muted">Explore a wide range of logistics and shipping services tailored for your business needs.</p>
+    
+    <div class="row mt-4">
+      <div class="col-md-4 mb-4">
+        <div class="card service-card">
+          <img src="https://img.freepik.com/free-photo/aerial-view-container-cargo-ship-sea_335224-717.jpg" class="card-img-top service-img" alt="Ocean Freight Shipping">
+          <div class="card-body text-start">
+            <h6 class="card-title fw-bold">Ocean Freight Shipping</h6>
+            <p class="card-text small">Reliable and cost-effective sea freight solutions for global cargo transportation.</p>
+            <span class="read-more">READ MORE &rarr;</span>
+          </div>
+          <div class="corner-icon">+</div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card service-card">
+          <img src="https://img.freepik.com/free-photo/industrial-port-container-yard_1112-1200.jpg" class="card-img-top service-img" alt="Air Freight Shipping">
+          <div class="card-body text-start">
+            <h6 class="card-title fw-bold">Air Freight Shipping</h6>
+            <p class="card-text small">Fast and efficient air cargo services to meet your urgent shipping needs worldwide.</p>
+            <span class="read-more">READ MORE &rarr;</span>
+          </div>
+          <div class="corner-icon">+</div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card service-card">
+          <img src="https://img.freepik.com/premium-photo/bulk-package-boxes-wrapped-plastic-stacked-pallets-trucks-parking-lot-logistics_36860-2482.jpg" class="card-img-top service-img" alt="Car Shipping">
+          <div class="card-body text-start">
+            <h6 class="card-title fw-bold">Car Shipping</h6>
+            <p class="card-text small">Professional auto transport services to safely deliver vehicles anywhere in the world.</p>
+            <span class="read-more">READ MORE &rarr;</span>
+          </div>
+          <div class="corner-icon">+</div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card service-card">
+          <img src="https://img.freepik.com/free-photo/interior-large-distribution-warehouse-with-shelves-stacked-with-palettes-goods-ready-market_342744-1481.jpg?semt=ais_hybrid&w=740" class="card-img-top service-img" alt="Warehouse Solutions">
+          <div class="card-body text-start">
+            <h6 class="card-title fw-bold">Warehouse Solutions</h6>
+            <p class="card-text small">Secure and scalable warehousing with real-time inventory tracking and management.</p>
+            <span class="read-more">READ MORE &rarr;</span>
+          </div>
+          <div class="corner-icon">+</div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card service-card">
+          <img src="https://img.freepik.com/free-photo/aerial-view-cargo-ship-cargo-container-harbor_335224-1380.jpg?uid=R203151179&ga=GA1.1.627833558.1747904160&semt=ais_hybrid&w=740" class="card-img-top service-img" alt="Customs Clearance">
+          <div class="card-body text-start">
+            <h6 class="card-title fw-bold">Customs Clearance</h6>
+            <p class="card-text small">Smooth and hassle-free customs handling for both import and export shipments.</p>
+            <span class="read-more">READ MORE &rarr;</span>
+          </div>
+          <div class="corner-icon">+</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <section class="quote-section" id="Bookquote">
+       <h3 class="text-center mb-4 fw-semibold" style="color: #007bff;">Book  Quote</h3>
+    <div class="quote-form-container text-center">
+      <h3>Get a Free Quote</h3>
+      <p>We always use best & fastest fleets</p>
+
+      <form class="quote-form">
+        <div class="row g-3">
+          <div class="col-12">
+            <input type="text" class="form-control" placeholder="Full Name" required>
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email" required>
+          </div>
+          <div class="col-md-6">
+            <input type="tel" class="form-control" placeholder="Mobile" required>
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Destination From">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Destination To">
+          </div>
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Shipping Type">
+          </div>
+          <div class="col-md-6">
+            <input type="date" class="form-control">
+          </div>
+          <div class="col-12">
+            <textarea class="form-control" placeholder="Message"></textarea>
+          </div>
+          <div class="col-12 text-start">
+            <button type="submit" class="btn text-white">Book Quote</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+   <section id="About">
+        <section class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 mb-4 mb-md-0">
+      <span class="section-subtitle">• Who We Are</span>
+      <h2 class="section-title mt-2 mb-3">Driven By Excellence,<br>Powered By Global Trade</h2>
+      <div class="section-text">
+        <p>We specialize in delivering seamless, reliable, and efficient import-export solutions tailored to meet the dynamic needs of international businesses.</p>
+        <p>With a strong global network, advanced technology, and unwavering commitment to compliance and logistics excellence, we simplify cross-border operations.</p>
+        <p>Our services ensure hassle-free documentation, customs clearance, and timely shipment delivery worldwide.</p>
+      </div>
+    </div>
+
+    <div class="col-md-6 text-center img-wrapper">
+      <img src="https://demo.bytelabx.com/laravel/quriar/assets/img/about/who-we-are-image.jpg" alt="Import Export Team">
+      <div class="exp-box">
+        <h1>8+</h1>
+        <p>Years Of<br>Experience</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <div class="row align-items-center">
+
+     <div class="col-md-6 text-center img-wrapper">
+      <img src="https://demo.bytelabx.com/laravel/quriar/assets/img/choose-us/03.jpg" alt="Import Export Worker">
+    </div>
+
+    <div class="col-md-6">
+      <p class="section-subtitle mb-1">• Why Choose Us</p>
+      <h2 class="section-title mb-4">
+        Committed To Seamless, Global,<br>
+        And Hassle-Free Trade Operations
+      </h2>
+
+      <div class="feature-box">
+        <i class="bi bi-truck"></i>
+        <div class="feature-text">
+          <h6>Global Shipping Expertise</h6>
+          <p>We specialize in cross-border logistics and timely export-import operations worldwide.</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <i class="bi bi-shield-check"></i>
+        <div class="feature-text">
+          <h6>Customs & Compliance Support</h6>
+          <p>We handle customs clearance and ensure adherence to international trade regulations.</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <i class="bi bi-bar-chart-line"></i>
+        <div class="feature-text">
+          <h6>Cost-Optimized Solutions</h6>
+          <p>We provide scalable and efficient shipping plans customized to your trade goals.</p>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <i class="bi bi-globe2"></i>
+        <div class="feature-text">
+          <h6>24/7 Global Tracking</h6>
+          <p>Real-time shipment tracking and support available across time zones.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </section>
+
+     <section id="Contact" class="container">
+       <h3 class="text-center mb-4 fw-semibold" style="color: #007bff;">Contact us</h3>
+  <div class="row g-4">
+    <div class="col-lg-6">
+      <div class="bg-white p-5 rounded-5 shadow">
+        <h4 class="text-center mb-3">Send Us Message</h4>
+        <h6 class="text-center mb-4 text-muted">Your email address will not be published. Required fields are marked *</h6>
+        <form>
+          <div class="row g-3">
+            <div class="col-md-12">
+              <label class="form-label">Full Name*</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="col-md-12">
+              <label class="form-label">Email*</label>
+              <input type="email" class="form-control" required>
+            </div>
+            <div class="col-md-12">
+              <label class="form-label">Subject*</label>
+              <select class="form-control" required>
+                <option value="">Select Subject</option>
+                <option>General Inquiry</option>
+                <option>Shipping Quote</option>
+                <option>Partnership</option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <label class="form-label">Preferred Contact Date</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Message*</label>
+              <textarea class="form-control" rows="4" required></textarea>
+            </div>
+            <div class="col-12 text-center">
+              <button class="btn btn-danger rounded-pill px-5 mt-3">
+                Send Your Message <i class="fa-solid fa-arrow-right ms-1"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="col-lg-6">
+      <div class="contact-info-box">
+        <h5>Get in Touch</h5>
+
+        <div class="info-item d-flex align-items-start">
+          <i class="fa-solid fa-location-dot mt-1"></i>
+          <div>
+            <strong>Our Address</strong><br>
+            123 Import-Export Street,<br> Anand, Gujarat 388001
+          </div>
+        </div>
+
+        <div class="info-item d-flex align-items-start">
+          <i class="fa-solid fa-phone mt-1"></i>
+          <div>
+            <strong>Contact Us</strong><br>
+            +91 98765 43210<br>
+            +91 91234 56789
+          </div>
+        </div>
+
+        <div class="info-item d-flex align-items-start">
+          <i class="fa-solid fa-envelope mt-1"></i>
+          <div>
+            <strong>Email Us</strong><br>
+            support@importexport.com<br>
+            info@importexport.com
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Google Map -->
+  <div class="mt-5 w-100">
+    <h3 class="text-center mb-4 fw-semibold" style="color: #007bff;">Our Location</h3>
+    <div class="ratio ratio-16x9 shadow overflow-hidden">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.845274913789!2d72.83106027465373!3d22.585388932305045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e5a2ad4f6f6d7%3A0x57a7f6a83a2f4b9b!2sAnand%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1718869363920!5m2!1sen!2sin" 
+        width="100%" height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <div class="footer-container">
+      
+      <div class="footer-column">
+        <h5>Import-Export</h5>
+        <p>
+          A trusted import-export partner connecting businesses globally with reliable shipping, logistics, and documentation services.
+        </p>
+      </div>
+
+      <div class="footer-column fo">
+        <h5>Quick Links</h5>
+        <p><a href="#">Home</a></p>
+        <p><a href="#">Services</a></p>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Contact</a></p>
+      </div>
+
+      <div class="footer-column fo">
+        <h5>Our Services</h5>
+        <p><a href="#">Ocean Freight Shipping</a></p>
+        <p><a href="#">Air Freight Shipping</a></p>
+        <p><a href="#">Car Shipping</a></p>
+        <p><a href="#">Warehouse Solutions</a></p>
+      </div>
+
+      <div class="footer-column fo">
+        <h5>Contact Us</h5>
+        <p><i class="fas fa-map-marker-alt"></i> 123 Import-Export Street,<br>Anand, Gujarat 388001</p>
+        <p><i class="fas fa-envelope"></i> info@importexport.com</p>
+        <p><i class="fas fa-phone"></i>+91 91234 56789</p>
+        <p><i class="fas fa-globe"></i> www.importexport.com</p>
+      </div>
+
+    </div>
+
+    <div class="footer-container" style="justify-content: space-between; align-items: center;">
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Import-Export. All rights reserved.
+    </div>
+  </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      const sectionHeight = section.offsetHeight;
+
+      if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true
+      }
+    });
+  </script>
+    <script>
+  const filterButtons = document.querySelectorAll('.filter-buttons button');
+  const cards = document.querySelectorAll('.project-card');
+
+  function reAnimateCards() {
+    cards.forEach(card => {
+      card.classList.remove('animate');
+    });
+
+   
+    setTimeout(() => {
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('animate');
+        }, index * 300); 
+      });
+    }, 50);
+  }
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      reAnimateCards();
+    });
+  });
+
+  window.addEventListener('load', () => {
+    reAnimateCards();
+  });
+</script>
+</body>
+</html>
